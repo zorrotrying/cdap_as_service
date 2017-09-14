@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Here is the web-service for your code:</h2>
+{% if rtype == 'GET' %}
+<h4>You can call service by GET method like this:{{ service_demo }}</h4>
+{% else %}
+<h3>You can call service by POST like this:</h3>
+{% for key, value in service_demo.items %}
+    <h3>{{ key }}: </h3> <h4>{{ value }}</h4>
+    {% endfor %}
+{% endif %}
+
+</body>
+</html>
