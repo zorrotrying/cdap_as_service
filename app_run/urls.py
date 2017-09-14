@@ -3,6 +3,6 @@ import views
 
 
 urlpatterns = [
-    url(r'^script$', views.script_run, name='app-run'),
+    url(r'^$', views.script_run, name='app-run'),
 ]
 
