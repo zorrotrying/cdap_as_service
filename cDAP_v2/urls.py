@@ -23,6 +23,6 @@ urlpatterns = [
     url(r'^runapp/', include('app_run.urls', namespace='app-run')),
     url(r'^newservice/', include('service_regist.urls', namespace='service-register')),
     url(r'^runservice/', include('service_run.urls', namespace='service-run')),
-    url(r'^service/', include('service_core.urls', namespace='service')),
+    #url(r'^service/', include('service_core.urls', namespace='service')),
     url(r'^admin/', admin.site.urls),
 ]

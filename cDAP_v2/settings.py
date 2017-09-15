@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'app_run',
     'service_regist',
     'service_run',
-    'service_core',
+    #'service_core',
 ]
 
 MIDDLEWARE = [
