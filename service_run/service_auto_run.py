@@ -7,8 +7,8 @@ import rpy2.robjects as robjects
 
 
 def auto_run_py(catgname, appname, **kwargs):
-    sys.path.append(os.path.join(settings.BASE_DIR, 'service_core', 'service_key_scripts'))
-    s_list = os.listdir(os.path.join(settings.BASE_DIR, 'service_core', 'service_key_scripts', catgname, appname))
+    sys.path.append(os.path.join(settings.BASE_DIR, 'service_run', 'service_key_scripts'))
+    s_list = os.listdir(os.path.join(settings.BASE_DIR, 'service_run', 'service_key_scripts', catgname, appname))
     s_list_filter = filter(lambda a: a != '__init__.py' and a.endswith('.py'), s_list)
     if len(s_list_filter) == 1:
         script_name = os.path.splitext(s_list_filter[0])[0]
@@ -19,7 +19,7 @@ def auto_run_py(catgname, appname, **kwargs):
     return app_result
 
 def auto_run_r(catgname, appname, **kwargs):
-    script_dir = os.path.join(settings.BASE_DIR, 'service_core', 'service_key_scripts', catgname, appname)
+    script_dir = os.path.join(settings.BASE_DIR, 'service_run', 'service_key_scripts', catgname, appname)
     s_list = os.listdir(script_dir)
     s_list_filter = filter(lambda a: a.endswith('.R'), s_list)
     if len(s_list_filter) == 1:
