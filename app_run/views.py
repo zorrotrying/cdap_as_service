@@ -19,12 +19,14 @@ import json
 def script_run(request):
     if request.method == 'POST':
         query_data = json.loads(request.body)
-        script_type = query_data['type']
-        script_path = query_data['spath']
+        script_type = query_data['stype']
+        catg_name = query_data['catg_name']
+        app_name = query_data['app_name']
+        script_name = query_data['script_name']
         kwargs = query_data['args_dict']
 
         if script_type == 'python':
-            app_result_json = auto_run_py(script_path, **kwargs)
+            app_result_json = auto_run_py(catg_name, app_name, script_name, **kwargs)
         else:
-            app_result_json = auto_run_r(script_path, **kwargs)
+            app_result_json = auto_run_r(catg_name, app_name, script_name, **kwargs)
         return JsonResponse(app_result_json, safe=False)

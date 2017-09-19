@@ -3,6 +3,7 @@ import views
 
 
 urlpatterns = [
-    url(r'script/type=(?P<type>[^/]+)&spath=(?P<spath>[^/]+)$', views.script_identify, name='app-identify'),
+    url(r'script/stype=(?P<stype>[^/]+)&catgname=(?P<catg_name>[^/]+)&appname=(?P<app_name>[^/]+)&sname=(?P<script_name>[^/]+)$',
+        views.script_identify, name='app-identify'),
 ]
 

@@ -3,5 +3,5 @@ import views
 
 
 urlpatterns = [
-    url(r'^(?P<stype>[^/]+)/(?P<catgname>[^/]+)/(?P<appname>[^/]+)/(?P<kwargs>[^/]*)$', views.service_run, name='service-run'),
+    url(r'^(?P<stype>[^/]+)/(?P<catg_name>[^/]+)/(?P<app_name>[^/]+)/(?P<kwargs>[^/]*)$', views.service_run, name='service-run'),
 ]
