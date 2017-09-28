@@ -128,3 +128,4 @@ STATIC_URL = '/static/'
 # service_code_dir_base = os.path.join(BASE_DIR, 'service_core', 'service_key_scripts')
 # app_code_dir_base = os.path.join(BASE_DIR, 'app_run', 'app_core_scripts')
 #
+# app_dir_root = r'H:\RobinWorks\01_Projects\10_cDAP\SourceCode\cDAP_workspace\sourcecode\TestingServer\app_core_scripts'
